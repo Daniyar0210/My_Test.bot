@@ -11,6 +11,10 @@ async def on_ready():
     print(f'We have logged in as {bot.user}')
 
 @bot.command()
+async def help(ctx):
+    await ctx.send(f'Команды: heh, add, hello!')
+
+@bot.command()
 async def hello(ctx):
     await ctx.send(f'Привет! Я бот {bot.user}!')
 
@@ -23,4 +27,4 @@ async def add(ctx, left: int, right: int):
     """Adds two numbers together."""
     await ctx.send(left + right)
     
-bot.run("ТУТ СЕКРЕТНЫЙ ТОКЕН")
+bot.run("")
